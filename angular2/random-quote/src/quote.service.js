@@ -1,6 +1,21 @@
-{
-  "source": "http://programmers.stackexchange.com/q/39/144251",
-  "quotes": [
+(function(app) {
+  var Class = ng.core.Class;
+
+  app.QuoteService = Class({
+    constructor: function QuoteService() {
+      this.quotes = sampleQuotes;
+    },
+    getRandomQuote: function() {
+      const randomIndex = Math.floor(Math.random() * this.quotes.length);
+      return this.quotes[randomIndex];
+    },
+    generateRandomQuotes: function(delay, callback) {
+      callback(this.getRandomQuote());
+      setTimeout(() => callback(this.getRandomQuote()), delay);
+    }
+  });
+
+  var sampleQuotes = [
     {
       "line": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
       "author": "Brian W. Kernighan"
@@ -41,5 +56,6 @@
       "line": "The first 90% of the code accounts for the first 90% of the development time. The remaining 10% of the code accounts for the other 90% of the development time.",
       "author": "Tom Cargill"
     }
-  ]
-}
+  ];
+
+})(window.app || (window.app = {}));

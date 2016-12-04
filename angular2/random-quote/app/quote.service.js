@@ -1,25 +1,39 @@
 "use strict";
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 (function (app) {
-  var Class = ng.core.Class;
+  var QuoteService = function () {
+    function QuoteService() {
+      _classCallCheck(this, QuoteService);
 
-  app.QuoteService = Class({
-    constructor: function QuoteService() {
       this.quotes = sampleQuotes;
-    },
-    getRandomQuote: function getRandomQuote() {
-      var randomIndex = Math.floor(Math.random() * this.quotes.length);
-      return this.quotes[randomIndex];
-    },
-    generateRandomQuotes: function generateRandomQuotes(delay, callback) {
-      var _this = this;
-
-      callback(this.getRandomQuote());
-      setTimeout(function () {
-        return callback(_this.getRandomQuote());
-      }, delay);
     }
-  });
+
+    _createClass(QuoteService, [{
+      key: "getRandomQuote",
+      value: function getRandomQuote() {
+        var randomIndex = Math.floor(Math.random() * this.quotes.length);
+        return this.quotes[randomIndex];
+      }
+    }, {
+      key: "generateRandomQuotes",
+      value: function generateRandomQuotes(delay, callback) {
+        var _this = this;
+
+        callback(this.getRandomQuote());
+        setTimeout(function () {
+          return callback(_this.getRandomQuote());
+        }, delay);
+      }
+    }]);
+
+    return QuoteService;
+  }();
+
+  app.QuoteService = QuoteService;
 
   var sampleQuotes = [{
     "line": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",

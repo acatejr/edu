@@ -5,14 +5,14 @@
   var RandomQuoteComponent = app.RandomQuoteComponent;
   var AppComponent = app.AppComponent;
 
-  app.AppModule = NgModule({
+  @NgModule({
     imports: [BrowserModule],
     declarations: [AppComponent, RandomQuoteComponent],
     providers: [QuoteService],
     bootstrap: [AppComponent]
   })
-  .Class({
-    constructor: function() { }
-  });
+  class AppModule { }
+
+  app.AppModule = AppModule;
 
 })(window.app || (window.app = {}));

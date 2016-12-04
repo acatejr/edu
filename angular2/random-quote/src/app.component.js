@@ -1,15 +1,15 @@
 (function(app) {
   var Component = ng.core.Component;
 
-  app.AppComponent = Component({
+  @Component({
     selector: 'my-app',
     template: `
       <h1>Random Quote!!!</h1>
       <random-quote></random-quote>
     `
   })
-  .Class({
-    constructor: function AppComponent() { }
-  });
+  class AppComponent {}
+
+  app.AppComponent = AppComponent;
 
 })(window.app || (window.app = {}));

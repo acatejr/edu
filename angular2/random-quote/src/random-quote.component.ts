@@ -6,7 +6,11 @@ import { QuoteService } from './quote.service';
   template: '<p><em>{{quote.line}}</em> - {{quote.author}}</p>'
 })
 export class RandomQuoteComponent {
-  constructor(@Inject QuoteService) {
-      quoteService.generateRandomQuotes(2000, (quote) => this.quote = quote);
+
+  quote;
+  
+  constructor(@Inject(QuoteService) quoteService) {
+    quoteService.generateRandomQuotes(2000, quote => this.quote = quote);
   }
+
 }

@@ -1,17 +1,17 @@
 export class QuoteService {
-  constructor() {
-    this.quotes = sampleQuotes;  
-  }
+
+  quotes = sampleQuotes;
 
   getRandomQuote() {
     const randomIndex = Math.floor(Math.random() * this.quotes.length);
-    return this.quotes[randomIndex];  
+    return this.quotes[randomIndex];
   }
 
   generateRandomQuotes(delay, callback) {
     callback(this.getRandomQuote());
-    setTimeout(() => callback(this.getRandomQuote()), delay);  
+    setTimeout(() => callback(this.getRandomQuote()), delay);
   }
+
 }
 
 const sampleQuotes = [
@@ -56,4 +56,3 @@ const sampleQuotes = [
     "author": "Tom Cargill"
   }
 ];
-

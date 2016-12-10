@@ -1,8 +1,7 @@
-"use strict";
+'use strict';
 
-(function (app) {
-  var platformBrowserDynamic = ng.platformBrowserDynamic.platformBrowserDynamic;
-  var AppModule = app.AppModule;
+var _platformBrowserDynamic = require('@angular/platform-browser-dynamic');
 
-  platformBrowserDynamic().bootstrapModule(AppModule);
-})(window.app || (window.app = {}));
+var _app = require('./app.module');
+
+(0, _platformBrowserDynamic.platformBrowserDynamic)().bootstrapModule(_app.AppModule);

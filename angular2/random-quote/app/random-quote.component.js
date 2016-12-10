@@ -1,19 +1,28 @@
 'use strict';
 
-(function (app) {
-  var Component = ng.core.Component;
-  var QuoteService = app.QuoteService;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.RandomQuoteComponent = undefined;
 
-  app.RandomQuoteComponent = Component({
-    selector: 'random-quote',
-    template: '<p><em>{{quote.line}}</em> - {{quote.author}}</p>'
-  }).Class({
-    constructor: [QuoteService, function RandomQuoteComponent(quoteService) {
-      var _this = this;
+var _dec, _class;
 
-      quoteService.generateRandomQuotes(2000, function (quote) {
-        return _this.quote = quote;
-      });
-    }]
+var _core = require('@angular/core');
+
+var _quote = require('./quote.service');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RandomQuoteComponent = exports.RandomQuoteComponent = (_dec = (0, _core.Component)({
+  selector: 'random-quote',
+  template: '<p><em>{{quote.line}}</em> - {{quote.author}}</p>'
+}), _dec(_class = function RandomQuoteComponent(QuoteService) {
+  var _this = this;
+
+  _classCallCheck(this, RandomQuoteComponent);
+
+  quoteService.generateRandomQuotes(2000, function (quote) {
+    return _this.quote = quote;
   });
-})(window.app || (window.app = {}));
+}) || _class);
+(0, _core.Inject)(RandomQuoteComponent, null, 0);

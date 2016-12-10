@@ -1,20 +1,22 @@
+import { Quote } from './quote.model';
+
 export class QuoteService {
 
-  quotes = sampleQuotes;
+  quotes: Quote[] = sampleQuotes;
 
-  getRandomQuote() {
+  getRandomQuote(): Quote {
     const randomIndex = Math.floor(Math.random() * this.quotes.length);
     return this.quotes[randomIndex];
   }
 
-  generateRandomQuotes(delay, callback) {
+  generateRandomQuotes(delay: number, callback: (quote: Quote) => void) {
     callback(this.getRandomQuote());
     setTimeout(() => callback(this.getRandomQuote()), delay);
   }
 
 }
 
-const sampleQuotes = [
+const sampleQuotes: Quote[] = [
   {
     "line": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
     "author": "Brian W. Kernighan"

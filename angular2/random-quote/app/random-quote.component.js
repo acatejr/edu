@@ -10,9 +10,6 @@ System.register(['@angular/core', './quote.service'], function(exports_1, contex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var __param = (this && this.__param) || function (paramIndex, decorator) {
-        return function (target, key) { decorator(target, key, paramIndex); }
-    };
     var core_1, quote_service_1;
     var RandomQuoteComponent;
     return {
@@ -33,9 +30,8 @@ System.register(['@angular/core', './quote.service'], function(exports_1, contex
                     core_1.Component({
                         selector: 'random-quote',
                         template: '<p><em>{{quote.line}}</em> - {{quote.author}}</p>'
-                    }),
-                    __param(0, core_1.Inject(quote_service_1.QuoteService)), 
-                    __metadata('design:paramtypes', [Object])
+                    }), 
+                    __metadata('design:paramtypes', [quote_service_1.QuoteService])
                 ], RandomQuoteComponent);
                 return RandomQuoteComponent;
             }());

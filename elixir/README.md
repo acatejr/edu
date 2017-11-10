@@ -43,3 +43,11 @@ hello.()
 {1,2,3}
 
 </code>
+
+## Pattern Matching  
+Elixer uses '=' as a match operator.  
+Joe Armstrong likes it to algebra x = y + 1  
+a = 8 is binding.  8 is bound to a.  
+8 = a is pattern matching.  
+
+Pin operator "^".  

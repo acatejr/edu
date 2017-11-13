@@ -50,4 +50,17 @@ Joe Armstrong likes it to algebra x = y + 1
 a = 8 is binding.  8 is bound to a.  
 8 = a is pattern matching.  
 
-Pin operator "^".  
+Pin operator "^".
+
+## Lists
+Containers that can hold any kind of type.
+[1, "two", "Three"]
+Lists designed to handle recursion.  
+
+## Keyword Lists  
+List of tuple pairs, where first item is an atom.  
+k = [{:a, 1}, {:b, 2}]
+k = [{:a, 1}, {:b, 2}]
+
+Not good for pattern matching.  
+Used to pass options to functions.  

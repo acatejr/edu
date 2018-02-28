@@ -64,3 +64,23 @@ k = [{:a, 1}, {:b, 2}]
 
 Not good for pattern matching.  
 Used to pass options to functions.  
+
+## Maps
+Type of dictionary, inherit from Dict
+Efficient key/value store
+Order not important
+
+Creating map:
+m = %{:a => 1, :b => 2}
+m[:a]
+1
+
+map.a
+1
+
+Use:
+Efficient because keys are indexed.
+Can have any type of key.
+
+### Pattern Matching in Maps
+Very powerful -- learn more.

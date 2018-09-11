@@ -27,3 +27,27 @@ Course instructor likes WebStorm, but he talks about Atom
 ### Finding Help
 At command line type "go help"
 golang.org
+
+## How Computers Work
+
+* Computers run on electricity
+* Circuit/Transistor/Switch - something that is on or off.
+* Coding schemes can be created based on a one or more circuits and their respective states
+Todd's Coding Scheme
+
+off : off | Go away  
+off : on  | Come in  
+on  : off | Bring Pizza  
+on  : on  | Bring beer  
+
+If we have three lights we have 2^n or 2^3 choices.
+
+TODO: Review binary, hex, and character representation.
+
+## Numeral Systems
+
+A writing system for expressing numbers.
+
+* Binary
+* Hexadecimal
+* Decimal

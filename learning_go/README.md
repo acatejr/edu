@@ -2,6 +2,8 @@
 
 ## Course Resources
 
+[ArdenLabs](https://www.ardanlabs.com/)
+
 https://goo.gl/PHKgO7
 
 Presentations: https://drive.google.com/drive/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU  
@@ -51,3 +53,48 @@ A writing system for expressing numbers.
 * Binary
 * Hexadecimal
 * Decimal
+
+## Section 5
+
+### Packages
+
+Folder name needs to be same as package name.
+No main file in package.
+
+All files in package folder must have the same package name.
+
+Package scope: files in same package can call functions from other files in that same package.
+
+Lower case funcs are not exported outside the package, they are visible inside the package.
+
+Can't have more than one func main() {} in main package.
+
+Useful go commands:
+
+* go run
+* go build
+* go install
+* go clean
+
+Declaring varialbes:
+
+* var myName = "Bill"
+* var myName string = "Bill"
+* myName := "John"
+
+### Go Commands
+
+go run <filename> - Runs the file.
+go build - Builds executable if folder has executable.
+go fmt - Format go code in current folder.
+go clean - Cleans current folder (e.g., deletes executable)
+go install - If in main, packages and installs the main executable in workspace bin folder.
+
+### Variables
+
+Many ways, but two methods are preferred:
+
+* shorthand
+    - can only be used inside func
+* var
+    - zero value

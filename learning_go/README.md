@@ -95,6 +95,105 @@ go install - If in main, packages and installs the main executable in workspace 
 Many ways, but two methods are preferred:
 
 * shorthand
-    - can only be used inside func
+    - can only be used inside func  
+    - handles declaration, assignment, initialization   
+    - Examples:
+        a := 10
+        b := "golang"
+        c := 4.17
+        d := true
 * var
     - zero value
+
+### Scope
+
+- Universe
+- Package - outside of any containng block.  Only accessible to whole pacakge.
+- File
+- Block (curly braces)
+
+Order does not matter in package level.  Order matters in blocks.
+Importing is at the file level.  
+
+```
+// Package level
+
+package main
+
+import "fmt"
+
+var x int = 42 // Package accessible var
+
+func main() {
+    
+    y : = 7 // Block level scope.  Only availabel in func main
+
+    fmt.Println(x)
+}
+```
+
+```
+// Example of shadowing
+
+package main
+
+import "fmt"
+
+func max(x int) int {
+    return 42 + x
+}
+
+func main() {
+    max := max(7)
+}
+```
+
+Declare vars as near to use as possible.
+
+### Closure
+
+```
+package main
+
+import "fmt"
+
+var x int = 42
+
+func main() {
+    // Outer scope
+
+    fmt.Println(x)
+    foo()
+
+    // Closure    
+    fmt.Println(x)
+    {
+        // Inner scope 
+        fmt.Println(x)
+        y := "The credit belongs with theone who is in the ring."
+        fmt.Println(y)
+    }
+
+    // An anonymous function - functions without name.
+    // A function expression
+    increment := func() int {
+        x++
+        return x
+    }
+
+    increment := wrapper()
+}
+
+func wrapper() func() int {
+    x := 0  // Always remembered by outer scope
+    return func() int {
+        x++
+        return x
+    }
+
+}
+
+func foo() {
+    fmt.Println(x)
+}
+```

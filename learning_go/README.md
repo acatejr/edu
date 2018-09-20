@@ -197,3 +197,59 @@ func foo() {
     fmt.Println(x)
 }
 ```
+
+### Constants I
+
+Best practices, constants are lower case.
+
+Multiple assignment example: 
+```
+const (
+   pi = 3.14
+   language = "go"
+)
+```
+
+*iota*  
+
+An extremely small amount.
+
+```
+const (
+	A = iota // 0
+	B	 // 1
+	C	 // 2
+)
+
+const (
+	D = iota // 0
+	E	 // 1
+	F	 // 2
+)
+```
+
+### Constants II
+
+[Rob Pike's blog post](https://blog.golang.org/constants).  
+
+* Go has NO mixing of numeric types.  
+* Statically typed.  
+* Types are checked at compile time.  
+
+Constants can be _typed_ and _untyped_.  
+
+   const hello = "Hello" // untyped
+   const hello string = "hello" // typed
+
+* Untyped - const value that does not yet have a fixed type, a "kind", not yet forced to obey strict
+rules that prevent combining differently typed values.
+
+x := 42 // 42 is untyped (aka "kind").  
+
+### Memory Addresses
+
+Post Office boxes analogy.  
+Memory slots/addresses.   
+
+Show var's memory address by using ampersand.
+fmt.Println("Address: ", &a)  // Displays memory hex value

@@ -12,6 +12,8 @@ Todd McLeod's youtube channel https://www.youtube.com/user/toddmcleod
 
 [Go Lang Forum](https://forum.golangbridge.org/)
 
+[Dave Cheney's Blog](https://dave.cheney.net/)  
+
 ## Installing Go
 
 ### Environment Variables

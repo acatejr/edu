@@ -271,3 +271,20 @@ Switch does NOT have the typical default fall-through.
 
 Rune - a single character (any language).  Also, an alias for int32.  An integer value identifying a unique unicode code point.  
 
+## Switch
+
+Like other languages, but does not have typical fall-through.  Have to explicitly use fallThrough if want fall-through behavior.  Break is default behavior for switch statement.  
+
+```
+switch x.(type) {
+    case int:
+        // do something
+    case string:
+        // do something else
+    case Person:
+        // do person thing
+    ...
+}
+```
+## If-then-else
+If-then-else and switchs accept or work with [initialization statements](https://golang.org/doc/effective_go.html#if).  

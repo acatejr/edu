@@ -10,6 +10,8 @@ Presentations: https://drive.google.com/drive/folders/0B22KXlqHz6ZNfjNXTzk1U3JHU
 
 Todd McLeod's youtube channel https://www.youtube.com/user/toddmcleod  
 
+[Go Lang Forum](https://forum.golangbridge.org/)
+
 ## Installing Go
 
 ### Environment Variables
@@ -253,3 +255,19 @@ Memory slots/addresses.
 
 Show var's memory address by using ampersand.
 fmt.Println("Address: ", &a)  // Displays memory hex value
+
+## Control Flow
+
+* Code read in sequence, top to bottom  
+* Loops/Iteration  
+* Scope  
+* Conditionals (e.g., if-then-else, switch)
+
+Switch does NOT have the typical default fall-through.  
+
+* For-loop
+
+### Documentation and Terminology
+
+Rune - a single character (any language).  Also, an alias for int32.  An integer value identifying a unique unicode code point.  
+

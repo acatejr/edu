@@ -290,3 +290,13 @@ switch x.(type) {
 ```
 ## If-then-else
 If-then-else and switchs accept or work with [initialization statements](https://golang.org/doc/effective_go.html#if).  
+
+## Functions
+
+func main() {} - is the entry point to a program.  Can only have one func main in entire program and func main has to be in package "main".  
+
+[Function Language Spec](https://golang.org/ref/spec#Function_types)  
+
+### Variadic Functions
+The final parameter in a func signature can have zero or more args if that param is declared with the "...", variatic, notation.  
+

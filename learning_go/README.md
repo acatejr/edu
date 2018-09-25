@@ -300,3 +300,26 @@ func main() {} - is the entry point to a program.  Can only have one func main i
 ### Variadic Functions
 The final parameter in a func signature can have zero or more args if that param is declared with the "...", variatic, notation.  
 
+## Callbacks
+
+Functions are types in the golang spec.  That means that a function can be passed as args to functions.  Or, a function can be returned by a function.  
+
+```
+// Example
+
+package main
+
+import "fmt"
+
+funct visit(numbers []int, callback func(int)) {
+    for _, n = range numbers {
+        callback(n)
+    }
+}
+
+func main() {
+    visit([]int{1, 2,3, 4}, func(n int){
+        fmt.Println(n)
+    })
+}
+```

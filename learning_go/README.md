@@ -323,3 +323,26 @@ func main() {
     })
 }
 ```
+### Defer
+
+Defer is a keyword.  [Defer statements](https://golang.org/ref/spec#Defer_statements) invoke a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding fuction executed a return, reached the end of its function body or because the correspoinding goroutine is panicking.
+
+Typically use defer to handle closing files.  
+
+### Pass By Value
+
+Everything in Go is passed by value.  
+
+### Anonymous Self Executing Function
+
+```
+package main
+
+import "fmt"
+
+func main() {
+    func() {
+        fmt.Println("I'm here.")
+    }
+}
+```

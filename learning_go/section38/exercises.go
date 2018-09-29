@@ -13,23 +13,24 @@ func main() {
 		result := n / 2
 		return result, isEven
 	}
-	fmt.Println("\n")
+	fmt.Println("")
 	fmt.Println(doHalf(1))
 	fmt.Println(doHalf(2))
+	fmt.Println(doHalf(5))
 
 	// Excercise 3 - find the greatest integer in list
-	fmt.Println("\n")
+	fmt.Println("")
 	fmt.Printf("The max is %d\n", findGreatest(1, 2, 3))
 	fmt.Printf("The max is %d\n", findGreatest(3, 99, 3))
 	fmt.Printf("The max is %d\n", findGreatest(13, 459, 7, 2, 4, 53, 73, 25, 3))
 
 	// Excercise 4 what is the value of:
 	// (true && false) || (false && true) || !(false && fale)
-	fmt.Println("\n")
+	fmt.Println("")
 	fmt.Printf("%t", expressionTest())
 
 	// Excercise 5 - function foo called in many ways
-	fmt.Println("\n")
+	fmt.Println("")
 	foo(1, 2)
 	foo(1, 2, 3)
 	aSlice := []int{1, 2, 3, 4}
@@ -48,9 +49,9 @@ func expressionTest() bool {
 
 func findGreatest(numList ...int) int {
 	var result int
-	for v := range numList {
-		if numList[v] > result {
-			result = numList[v]
+	for i := range numList {
+		if numList[i] > result {
+			result = numList[i]
 		}
 	}
 	return result

@@ -346,3 +346,24 @@ func main() {
     }
 }
 ```
+
+## Section 40 - Slices
+
+Slices are lists.  
+
+```
+myslice := []int{1,2,3,5} // A slice of int's with values.
+myslice[2:4]  // Slicing a slice.  Give everthing from position 2 up to, but not including position 4
+myslice[2]    // Get item at position 2
+"myString"[2] // Item at position 2 in "myString", which is S, aka Index access.
+```
+
+Slices have length, the number of items in the slice.
+Slices have capacity, the number of items the slice can contain.
+
+Creating a slice: make([]T, length, capacity)
+
+```
+mySlice := make([]int, 50, 100)
+mySlice := new([100]int)[0:50]
+```

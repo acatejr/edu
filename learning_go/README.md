@@ -367,3 +367,4 @@ Creating a slice: make([]T, length, capacity)
 mySlice := make([]int, 50, 100)
 mySlice := new([100]int)[0:50]
 ```
+## More on Slices

@@ -14,8 +14,20 @@ func world() {
 
 func main() {
 
-	defer world()
-	hello()
+	student := []string{}
+	students := make([]string, 35, 50)
+	moreStudents := []string{"Mike", "Bill"}
+	fmt.Println(student)
+	fmt.Println(students)
+	fmt.Println(moreStudents)
+
+	for i := 1; i < 1000; i++ {
+		moreStudents = append(moreStudents, "Steve")
+	}
+
+	fmt.Println(moreStudents)
+	// defer world()
+	// hello()
 	// x := 42
 	// fmt.Println(x)
 	// {

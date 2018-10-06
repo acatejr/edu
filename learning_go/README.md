@@ -4,11 +4,11 @@
 
 [ArdenLabs](https://www.ardanlabs.com/)
 
-https://goo.gl/PHKgO7
+[Course Google Docs](https://goo.gl/PHKgO7)
 
-Presentations: https://drive.google.com/drive/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU  
+[Presentations](https://drive.google.com/drive/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU)
 
-Todd McLeod's youtube channel https://www.youtube.com/user/toddmcleod  
+[Todd McLeod's youtube channel](https://www.youtube.com/user/toddmcleod)
 
 [Go Lang Forum](https://forum.golangbridge.org/)
 
@@ -17,6 +17,7 @@ Todd McLeod's youtube channel https://www.youtube.com/user/toddmcleod
 ## Installing Go
 
 ### Environment Variables
+
 Type go env to show Go specific environment variables.
 
 Two required environment variables:  
@@ -31,6 +32,7 @@ Course instructor likes WebStorm, but he talks about Atom
 ## The Go command and Documentation
 
 ### Finding Help
+
 At command line type "go help"
 golang.org
 
@@ -39,6 +41,7 @@ golang.org
 * Computers run on electricity
 * Circuit/Transistor/Switch - something that is on or off.
 * Coding schemes can be created based on a one or more circuits and their respective states
+
 Todd's Coding Scheme
 
 off : off | Go away  
@@ -88,7 +91,7 @@ Declaring varialbes:
 
 ### Go Commands
 
-go run <filename> - Runs the file.
+go run [filename] - Runs the file.
 go build - Builds executable if folder has executable.
 go fmt - Format go code in current folder.
 go clean - Cleans current folder (e.g., deletes executable)
@@ -99,27 +102,29 @@ go install - If in main, packages and installs the main executable in workspace 
 Many ways, but two methods are preferred:
 
 * shorthand
-    - can only be used inside func  
-    - handles declaration, assignment, initialization   
-    - Examples:
+  * can only be used inside func  
+
+  * handles declaration, 
+    assignment, initialization
+
+  * Examples:
         a := 10
         b := "golang"
         c := 4.17
         d := true
-* var
-    - zero value
+* var - zero value
 
 ### Scope
 
-- Universe
-- Package - outside of any containng block.  Only accessible to whole pacakge.
-- File
-- Block (curly braces)
+* Universe
+* Package - outside of any containng block.  Only accessible to whole pacakge.
+* File
+* Block (curly braces)
 
 Order does not matter in package level.  Order matters in blocks.
 Importing is at the file level.  
 
-```
+```go
 // Package level
 
 package main
@@ -129,14 +134,13 @@ import "fmt"
 var x int = 42 // Package accessible var
 
 func main() {
-    
     y : = 7 // Block level scope.  Only availabel in func main
 
     fmt.Println(x)
 }
 ```
 
-```
+```go
 // Example of shadowing
 
 package main
@@ -156,7 +160,7 @@ Declare vars as near to use as possible.
 
 ### Closure
 
-```
+```go
 package main
 
 import "fmt"
@@ -206,29 +210,28 @@ func foo() {
 
 Best practices, constants are lower case.
 
-Multiple assignment example: 
-```
+Multiple assignment example:  
+
+```go
 const (
    pi = 3.14
    language = "go"
 )
 ```
 
-*iota*  
+*iota*  - An extremely small amount.  
 
-An extremely small amount.
-
-```
+```go
 const (
-	A = iota // 0
-	B	 // 1
-	C	 // 2
+    A = iota // 0
+    B // 1
+    C // 2
 )
 
 const (
-	D = iota // 0
-	E	 // 1
-	F	 // 2
+    D = iota // 0
+    E // 1
+    F // 2
 )
 ```
 
@@ -253,7 +256,7 @@ x := 42 // 42 is untyped (aka "kind").
 ### Memory Addresses
 
 Post Office boxes analogy.  
-Memory slots/addresses.   
+Memory slots/addresses.  
 
 Show var's memory address by using ampersand.
 fmt.Println("Address: ", &a)  // Displays memory hex value
@@ -277,7 +280,7 @@ Rune - a single character (any language).  Also, an alias for int32.  An integer
 
 Like other languages, but does not have typical fall-through.  Have to explicitly use fallThrough if want fall-through behavior.  Break is default behavior for switch statement.  
 
-```
+```go
 switch x.(type) {
     case int:
         // do something
@@ -288,7 +291,9 @@ switch x.(type) {
     ...
 }
 ```
+
 ## If-then-else
+
 If-then-else and switchs accept or work with [initialization statements](https://golang.org/doc/effective_go.html#if).  
 
 ## Functions
@@ -298,13 +303,14 @@ func main() {} - is the entry point to a program.  Can only have one func main i
 [Function Language Spec](https://golang.org/ref/spec#Function_types)  
 
 ### Variadic Functions
+
 The final parameter in a func signature can have zero or more args if that param is declared with the "...", variatic, notation.  
 
 ## Callbacks
 
 Functions are types in the golang spec.  That means that a function can be passed as args to functions.  Or, a function can be returned by a function.  
 
-```
+```go
 // Example
 
 package main
@@ -323,6 +329,7 @@ func main() {
     })
 }
 ```
+
 ### Defer
 
 Defer is a keyword.  [Defer statements](https://golang.org/ref/spec#Defer_statements) invoke a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding fuction executed a return, reached the end of its function body or because the correspoinding goroutine is panicking.
@@ -351,7 +358,7 @@ func main() {
 
 Slices are lists.  
 
-```
+```go
 myslice := []int{1,2,3,5} // A slice of int's with values.
 myslice[2:4]  // Slicing a slice.  Give everthing from position 2 up to, but not including position 4
 myslice[2]    // Get item at position 2
@@ -363,8 +370,11 @@ Slices have capacity, the number of items the slice can contain.
 
 Creating a slice: make([]T, length, capacity)
 
-```
+```go
 mySlice := make([]int, 50, 100)
 mySlice := new([100]int)[0:50]
 ```
-## More on Slices
+
+### More on Slices
+
+## Secton 48

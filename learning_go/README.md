@@ -377,4 +377,11 @@ mySlice := new([100]int)[0:50]
 
 ### More on Slices
 
-## Secton 48
+## Secton 41 - Data Structures - Map
+
+Key/value based data structure.  Sometimes known as dictionaries in other programming languages.  
+
+* slices - for lists
+* maps - for key-value pairs, unordered, built on top of a hash table
+* structs - for composite data
+

@@ -385,3 +385,36 @@ Key/value based data structure.  Sometimes known as dictionaries in other progra
 * maps - for key-value pairs, unordered, built on top of a hash table
 * structs - for composite data
 
+* "comma ok" idiom - use to see if value is assigned or empty.
+
+```go
+var seconds int
+var ok bool
+seconds, ok = timeZone[tz]
+
+for offset(tz string) int {
+    if seconds, ok := timeZone[tz]; ok {
+        return seconds
+    }
+
+    log.Println("Uknown time zone: ", tz)
+    return 0
+}
+```
+
+## Hashtables
+
+[One of the most useful data structures](https://en.wikipedia.org/wiki/Hash_table).  Enable very fast searching.  
+
+## Creating First Project with WebStorm
+
+* Package names should be short, concise and provocative.  
+* Folder name should be same as package name.  
+* Can see go commands just by typing "go" at the command prompt.
+  * go fmt - will format your go code.
+  * go run - will run the go file.
+  * go build - will build the program executable to the folder name holding the code, puts executable in workspace/bin
+    * $GOPATH/bin
+  * go clean - cleans the current workspace
+  * go env - show go's environment variables/settings
+  

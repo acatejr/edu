@@ -23,7 +23,7 @@ Type go env to show Go specific environment variables.
 Two required environment variables:  
     GOROOT is set to where you installed GO (e.g., Windows GOROOT=c:\GO)
 
-    GOPATH is set to where you to your workspace
+    GOPATH is set to your workspace
 
 ### Go Editors
 

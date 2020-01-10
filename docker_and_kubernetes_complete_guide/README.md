@@ -6,7 +6,8 @@ draw.io
 ## Notes
 docker run = docker create + docker start  
 
-*Restarting Stopped Containers* 
+### Section 2
+**Restarting Stopped Containers**
 docker start does not show you output coming from the container whereas  
 docker run does
 

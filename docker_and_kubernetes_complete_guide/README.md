@@ -41,3 +41,10 @@ The Purpose of the IT Flag
 Container Isolation  
     File systems are not automatically shared between 2 containers.  
 
+## Section 3  
+
+Docker tagging convention:
+
+docker build -t <docker id>/<image name>:<version> .
+
+

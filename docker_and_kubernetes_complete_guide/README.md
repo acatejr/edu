@@ -18,3 +18,26 @@ docker ps --all to show all containters, even ones run in the past.
 this command will list the container id, then using container id as follows:  
 docker start -a <container id> will re-run whatever that container ran and show the   
 container's output to the terminal.  
+
+Retrieving Log Outputs  
+    docker logs <container id>
+
+Stopping Containers   
+    docker stop <container id> - sends signal (sigterm) to running process in container.  If
+    container does not automatically stop in 10 seconds then docker issues docker kill command.  
+    
+    docker kill <container id> - sends kill signal (sigkill) to running container.  Immediate stop,
+    now.  
+
+Multi-Command Containers  
+   docker exec -it <container id> <command>   
+
+The Purpose of the IT Flag  
+    Every process run in a container has 3 communication channels, STDIN, STDOUT, STDERR.  
+    The IT flag is actuall two flags, -i and -t.  
+    The -i attaches our terminal gets directed to STDIN.  
+    The -t flag ensures text entered in and output is formatted for the screen.  
+
+Container Isolation  
+    File systems are not automatically shared between 2 containers.  
+

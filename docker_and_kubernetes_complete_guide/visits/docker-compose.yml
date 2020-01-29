@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    redis-server:
+        container_name: redis-server
+        image: redis
+    node-app:
+        container_name: node-app
+        build: .
+        ports:
+            - 8080:8081
+        restart: always

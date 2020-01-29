@@ -53,3 +53,10 @@ Started simpleweb
 
 ## Section 5  
 
+## Section 6
+
+Flow focuses around GitHub Repo
+Two branches: feature, and master
+
+Review section 62 - Flow Specifics.  This is a very good description of development workflow.  
+

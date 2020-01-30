@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-
     web:
         container_name: web
         build:
@@ -12,4 +11,12 @@ services:
         volumes:
             - /app/node_modules
             - .:/app
-
+    tests:
+        container_name: tests
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes:
+            - /app/node_modules
+            - .:/app
+        command: ["npm", "run", "test"]

@@ -60,3 +60,15 @@ Two branches: feature, and master
 
 Review section 62 - Flow Specifics.  This is a very good description of development workflow.  
 
+## Section 7  
+If you are running on Windows, please read this: Create-React-App has some issues detecting when
+files get changed on Windows based machines.  To fix this, please do the following:
+
+In the root project directory, create a file called .env
+
+Add the following text to the file and save it: CHOKIDAR_USEPOLLING=true
+
+That's all!
+
+For more on why this is required, you can check out:
+https://facebook.github.io/create-react-app/docs/troubleshooting#npm-start-doesn-t-detect-changes

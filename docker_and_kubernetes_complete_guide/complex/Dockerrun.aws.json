@@ -5,7 +5,8 @@
             "name": "client",
             "image": "acatejr/multi-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memory": "128"
         },
         {
             "name": "server",
@@ -17,7 +18,8 @@
             "name": "worker",
             "image": "acatejr/multi-worker",
             "hostname": "worker",
-            "essential": false
+            "essential": false,
+            "memory": "128
         },
         {
             "name": "nginx",
@@ -33,7 +35,8 @@
             "links": [
                 "client",
                 "server"
-            ]
+            ],
+            "memory": 128
         }
     ]
 }

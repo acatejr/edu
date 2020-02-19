@@ -1,0 +1,27 @@
+language: generic
+sudo: required
+
+services:
+    - docker
+
+before_install:
+    - docker build -t acatejr/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+    - docker run -e CI=true acatejr/react-test npm test -- --coverage
+
+after_success:
+    - docker build -t acatejr/multi-client ./client
+    - docker build -t acatejr/multi-nginx ./nginx
+    - docker build -t acatejr/multi-server ./server
+    - docker build -t acatejr/multi-worker ./worker
+    
+    # Log in to the docker CLI
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+    # Take those images and push them to docker hub
+    - docker push acatejr/multi-client
+    - docker push acatejr/multi-nginx
+    - docker push acatejr/multi-server
+    - docker push acatejr/multi-worker
+
